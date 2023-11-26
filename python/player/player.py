@@ -1,7 +1,7 @@
 import pygame
 from python.window import Window
 from python.environment import platform
-from python.lists import Lists
+from python.lists import lists
 
 
 grass = platform.Platform(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Assets\grass.png", 0, 470, 0, True, 40, 40)

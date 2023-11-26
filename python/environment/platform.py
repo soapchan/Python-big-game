@@ -1,6 +1,6 @@
 import pygame
 from python.window import Window
-from python.lists import Lists
+from python.lists import lists
 
 
 window = Window()
