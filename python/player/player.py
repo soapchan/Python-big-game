@@ -51,7 +51,7 @@ class Player:
 		for i in range(count):
 			i += 1
 			jump1 = pygame.image.load(rf"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Jumlp-All\Jump-All{i}.png")
-			print(i)
+			window.fill()
 			window.display.blit(jump1, (self.x, self.y))
 			pygame.time.wait(100)
 			pygame.display.flip()
