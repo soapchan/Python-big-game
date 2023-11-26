@@ -39,6 +39,7 @@ class Player:
 			self.idle()
 		if self.mode == "jump":
 			self.jump()
+		self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
 
 
 	def jump(self):
@@ -62,7 +63,6 @@ class Player:
 	def fall(self):
 		if self.falling and not self.is_collision(lists.rects):
 			self.y += self.gravity
-			self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
 
 
 	def is_collision(self, lst):
@@ -71,4 +71,3 @@ class Player:
 			if self.rect.colliderect(rect):
 				return True
 		return False
-

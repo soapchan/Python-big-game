@@ -22,12 +22,12 @@ class Platform:
 		image = pygame.image.load(self.directory)
 		window.display.blit(image, (self.x, self.y))
 
-
 	def floor_print(self):
 		count = window.width // self.width
 		image = pygame.image.load(self.directory)
 		for i in range(count):
 			x = i * self.width
 			window.display.blit(image, (x, self.y))
-			self.x += self.x
-			lists.rects.append(self.rect)
+			# Correctly position the next platform
+			rect = pygame.Rect(x, self.y, self.width, self.height)
+			lists.rects.append(rect)
