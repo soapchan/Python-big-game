@@ -2,12 +2,15 @@ import pygame
 
 
 class Player:
-	def __init__(self, x, y, vel):
+	def __init__(self, x, y, vel, width, height):
 		self.width = 35
 		self.height = 48
 		self.x = x
 		self.y = y
 		self.vel = vel
+		self.width = width
+		self.height = height
+		self.rect = pygame.Rect(x, y, width, height)
 
 
 	def Idle(self):
@@ -19,3 +22,6 @@ class Player:
 		pygame.time.wait(100)
 		idle4 = pygame.image.load(r"assets/Character/Idle/Idle-export4.png")
 		pygame.time.wait(100)
+
+
+	def draw(self):
