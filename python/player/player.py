@@ -20,6 +20,7 @@ class Player:
 
 
 	def idle(self):
+		# not to self: change the way gif plays
 		idle1 = pygame.image.load(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Idle\Idle-export1.png")
 		window.display.blit(idle1, (self.x, self.y))
 		pygame.time.wait(100)
