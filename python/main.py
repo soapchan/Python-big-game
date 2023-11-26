@@ -9,7 +9,7 @@ pygame.init()
 
 window = Window()
 grass = platform.Platform(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Assets\grass.png", 0, 470, 0, True, 40, 40)
-player = player.Player(x=50, y=350, xvel=0, yvel=0, width=64, height=64, mode="idle", falling=True, gravity=0.5)
+player = player.Player(x=50, y=350, xvel=0, yvel=0, width=64, height=64, mode="idle", falling=True, gravity=2)
 
 
 class Main:

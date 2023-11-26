@@ -44,7 +44,10 @@ class Player:
 	def jump(self):
 		if not self.falling:
 			count = 15
+			self.yvel = 1
 			for i in range(count):
+				self.y -= self.yvel
+				self.yvel -= 1
 				i += 1
 				jump1 = pygame.image.load(rf"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Jumlp-All\Jump-All{i}.png")
 				window.fill()
@@ -63,6 +66,7 @@ class Player:
 
 	def is_collision(self, lst):
 		for rect in lst:
+			print(rect)
 			if self.rect.colliderect(rect):
 				return True
 			else:
