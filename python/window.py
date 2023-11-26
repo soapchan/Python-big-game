@@ -7,6 +7,7 @@ class Window:
 		self.height = 500
 		self.colour = 255, 255, 255
 		self.display = pygame.display.set_mode((self.width, self.height))
+		self.tickrate = 60
 
 
 	def fill(self):
