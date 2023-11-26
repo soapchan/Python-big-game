@@ -1,7 +1,9 @@
 import pygame
 from python.window import Window
+from python.lists import Lists
 
 
+lists = Lists()
 window = Window()
 
 
@@ -29,3 +31,4 @@ class Platform:
 			x = i * self.width
 			window.display.blit(image, (x, self.y))
 			self.x += self.x
+			lists.rects.append(self.rect)
