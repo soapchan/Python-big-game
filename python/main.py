@@ -9,7 +9,7 @@ pygame.init()
 
 window = Window()
 platform = platform.Platform(r"assets/Assets/grass.png", 0, 450, 0, True, 500, 50)
-player = player.Player(50, 100, 0, 35, 48, "idle")
+player = player.Player(50, 400, 0, 35, 48, "idle")
 
 
 class Main:

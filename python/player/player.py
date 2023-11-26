@@ -42,3 +42,7 @@ class Player:
 	def action(self):
 		if self.mode == "idle":
 			self.idle()
+
+
+	def move(self, direction):
+		pass

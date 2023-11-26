@@ -1,4 +1,8 @@
 import pygame
+from python.window import Window
+
+
+window = Window()
 
 
 class Platform:
@@ -7,10 +11,19 @@ class Platform:
 		self.x = x
 		self.y = y
 		self.vel = vel
-		self. collide = collide
+		self.collide = collide
 		self.width = width
 		self.height = height
+		self.rect = pygame.Rect(x, y, width, height)
 
 
 	def create(self):
-		pass
+		image = pygame.image.load(self.directory)
+		window.display.blit(image, (self.x, self.y))
+
+
+	def floor_print(self, count=0):
+		for self.width in window.width:
+			count += 1
+		image = pygame.image.load(self.directory)
+		window.display.blit(image, ((self.x * count), self.y))
