@@ -3,7 +3,6 @@ from python.window import Window
 from python.lists import Lists
 
 
-lists = Lists()
 window = Window()
 
 
