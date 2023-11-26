@@ -8,17 +8,18 @@ window = Window()
 
 
 class Player:
-	def __init__(self, x, y, vel, width, height, mode):
+	def __init__(self, x, y, xvel, yvel, width, height, mode):
 		self.width = 35
 		self.height = 48
 		self.x = x
 		self.y = y
-		self.vel = vel
+		self.vel = xvel
 		self.width = width
 		self.height = height
 		self.rect = pygame.Rect(x, y, width, height)
 		self.mode = mode
 		self.clock = pygame.time.Clock
+		self.yvel = yvel
 
 
 	def idle(self):
