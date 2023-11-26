@@ -1,7 +1,9 @@
 import pygame
 from python.window import Window
+from python.environment import platform
 
 
+grass = platform.Platform(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Assets\grass.png", 0, 450, 0, True, 40, 40)
 window = Window()
 
 
@@ -52,8 +54,9 @@ class Player:
 			i += 1
 			jump1 = pygame.image.load(rf"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Jumlp-All\Jump-All{i}.png")
 			window.fill()
+			grass.floor_print()
 			window.display.blit(jump1, (self.x, self.y))
 			pygame.display.flip()
 			pygame.time.wait(100)
 			i += 1
-			self.mode = "idle"
+		self.mode = "idle"
