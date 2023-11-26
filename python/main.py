@@ -8,7 +8,7 @@ pygame.init()
 
 
 window = Window()
-platform = platform.Platform(r"assets/Assets/grass.png", 0, 450, 0, True, 500, 50)
+grass = platform.Platform(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Assets\grass.png", 0, 450, 0, True, 40, 40)
 player = player.Player(50, 400, 0, 35, 48, "idle")
 
 
@@ -24,6 +24,7 @@ class Main:
 					self.running = False
 
 			window.fill()
+			grass.floor_print()
 			player.action()
 			pygame.display.flip()
 
