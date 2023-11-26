@@ -1,11 +1,13 @@
 import pygame
 from window import Window
+from player import player
 
 
 pygame.init()
 
 
 window = Window()
+player = player.Player()
 
 
 class Main:
