@@ -57,7 +57,7 @@ class Player:
 
 
 	def fall(self):
-		if self.falling and not self.is_collision(Lists.rect.rects):
+		if self.falling and not self.is_collision(lists.rects):
 			self.y += self.gravity
 
 
