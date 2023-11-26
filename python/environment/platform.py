@@ -24,7 +24,6 @@ class Platform:
 
 	def floor_print(self):
 		count = window.width // self.width
-		print(count)
 		image = pygame.image.load(self.directory)
 		for i in range(count):
 			x = i * self.width

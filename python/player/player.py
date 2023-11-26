@@ -42,7 +42,11 @@ class Player:
 	def action(self):
 		if self.mode == "idle":
 			self.idle()
+		if self.mode == "jump":
+			self.jump()
 
 
-	def move(self, direction):
-		pass
+	def jump(self):
+		jump1 = pygame.image.load(
+			r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Jumlp-All\Jump-All.aseprite")
+		window.display.blit(jump1, (self.x, self.y))
