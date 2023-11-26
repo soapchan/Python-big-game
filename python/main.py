@@ -23,6 +23,11 @@ class Main:
 				if event.type == pygame.QUIT:
 					self.running = False
 
+				if event.type == pygame.KEYDOWN:
+					if event.key == pygame.K_SPACE:
+						player.mode = "jump"
+						player.jump()
+
 			window.fill()
 			grass.floor_print()
 			player.action()

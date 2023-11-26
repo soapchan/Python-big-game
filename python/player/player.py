@@ -47,6 +47,13 @@ class Player:
 
 
 	def jump(self):
-		jump1 = pygame.image.load(
-			r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Jumlp-All\Jump-All.aseprite")
-		window.display.blit(jump1, (self.x, self.y))
+		count = 15
+		for i in range(count):
+			i += 1
+			jump1 = pygame.image.load(rf"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Jumlp-All\Jump-All{i}.png")
+			print(i)
+			window.display.blit(jump1, (self.x, self.y))
+			pygame.time.wait(100)
+			pygame.display.flip()
+			i += 1
+			self.mode = "idle"
