@@ -22,23 +22,12 @@ class Player:
 
 
 	def idle(self):
-		# not to self: change the way gif plays
-		idle1 = pygame.image.load(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Idle\Idle-export1.png")
-		window.display.blit(idle1, (self.x, self.y))
-		pygame.time.wait(100)
-		pygame.display.flip()
-		idle2 = pygame.image.load(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Idle\Idle-export2.png")
-		window.display.blit(idle2, (self.x, self.y))
-		pygame.time.wait(100)
-		pygame.display.flip()
-		idle3 = pygame.image.load(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Idle\Idle-export3.png")
-		window.display.blit(idle3, (self.x, self.y))
-		pygame.time.wait(100)
-		pygame.display.flip()
-		idle4 = pygame.image.load(r"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Idle\Idle-export4.png")
-		window.display.blit(idle4, (self.x, self.y))
-		pygame.time.wait(100)
-		pygame.display.flip()
+		count = 1
+		for i in range(4):
+			idle1 = pygame.image.load(fr"C:\Users\noahf\Desktop\python-all\Python-big-game\assets\Character\Idle\Idle{count}.png")
+			window.display.blit(idle1, (self.x, self.y))
+			pygame.time.wait(100)
+			count += 1
 
 
 	def action(self):
