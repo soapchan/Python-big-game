@@ -22,7 +22,7 @@ class Platform:
 		window.display.blit(image, (self.x, self.y))
 
 
-	def floor_print(self, count=0):
+	def floor_print(self):
 		image = pygame.image.load(self.directory)
 		window.display.blit(image, (self.x, self.y))
 		self.x += self.width
