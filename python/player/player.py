@@ -62,6 +62,7 @@ class Player:
 	def fall(self):
 		if self.falling and not self.is_collision(lists.rects):
 			self.y += self.gravity
+			self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
 
 
 	def is_collision(self, lst):
@@ -69,5 +70,5 @@ class Player:
 			print(rect)
 			if self.rect.colliderect(rect):
 				return True
-			else:
-				return False
+		return False
+
